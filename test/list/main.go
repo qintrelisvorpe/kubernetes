@@ -63,7 +63,7 @@ func collect(filename string, src interface{}) []Test {
 	ast.Walk(makeWalker("[k8s.io]", fset, &tests), f)
 
 	// Unit tests are much simpler to enumerate!
-	if strings.HasSuffix(filename, "_test.go") {
+	if strings.HasSuffix(filename, "_test2.go") {
 		packageName := f.Name.Name
 		dirName, _ := filepath.Split(filename)
 		if filepath.Base(dirName) != packageName && *warn {
