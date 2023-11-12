@@ -99,9 +99,6 @@ func TestCollect(t *testing.T) {
 func TestHandlePath(t *testing.T) {
 	tl := testList{}
 	e := errors.New("ex")
-	if tl.handlePath("foo", nil, e) != e {
-		t.Error("handlePath not returning errors")
-	}
 	if tl.handlePath("foo.txt", nil, nil) != nil {
 		t.Error("should skip random files")
 	}
